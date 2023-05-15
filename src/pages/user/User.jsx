@@ -113,7 +113,9 @@ export default function User() {
                 </label>
                 <input type="file" id="file" style={{ display: "none" }} />
               </div>
+              <Link to="/users">
               <button className="userUpdateButton">Update</button>
+              </Link>
             </div>
           </form>
         </div>

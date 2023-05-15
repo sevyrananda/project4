@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Form() {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm()
+    const { register, handleSubmit } = useForm()
     const onSubmit = data => console.log(data);
 
     // console.log(watch('username'));
@@ -24,7 +24,7 @@ export default function Form() {
                 <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" {...register("username")} placeholder='username' />
                     <input type="text" {...register("password")} placeholder='password' />
-                    <Link to="/">
+                    <Link to="/dashboard">
                     <button className="loginButton">Login</button>
                     </Link>
                 </form>

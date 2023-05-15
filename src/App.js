@@ -9,12 +9,12 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import Login from "./pages/login/Login";
-import Approve from "./pages/approve/Approve";
-import ApproveList from "./pages/approveList/ApproveList";
+import ApprovedList from "./pages/approvedList/ApprovedList";
 import InputManual from "./pages/inputManual/InputManual";
 import RekapLaporan from "./pages/rekapLaporan/RekapLaporan";
 import Edit from "./pages/edit/Edit";
 import EditList from "./pages/editList/EditList";
+import Timbang from "./pages/timbang/Timbang";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
       <div className="container">
         <Sidebar />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/dashboard">
             <Dashboard />
           </Route>
           <Route path="/users">
@@ -48,11 +48,8 @@ function App() {
           <Route path="/product/:productId">
             <Product />
           </Route>
-          <Route path="/approves">
-            <ApproveList />
-          </Route>
-          <Route path="/approves/:productId">
-            <Approve />
+          <Route path="/approved">
+            <ApprovedList />
           </Route>
           <Route path="/edit">
             <EditList />
@@ -65,6 +62,9 @@ function App() {
           </Route>
           <Route exact path="/inputManual">
             <InputManual />
+          </Route>
+          <Route exact path="/timbang">
+            <Timbang />
           </Route>
         </Switch>
       </div>

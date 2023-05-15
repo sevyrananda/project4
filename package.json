@@ -1,5 +1,5 @@
 {
-  "name": "lamaadmin",
+  "name": "project4",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +16,7 @@
     "react-scripts": "^5.0.1",
     "recharts": "^2.0.9",
     "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.7.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

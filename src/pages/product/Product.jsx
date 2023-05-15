@@ -8,7 +8,7 @@ export default function Product() {
   return (
     <div className="product">
       <div className="productTitleContainer">
-        <h2 className="productTitle">Product</h2>
+        <h2 className="productTitle">Halaman Untuk Verifikasi</h2>
       </div>
       <div className="productTop">
           <div className="productTopLeft">
@@ -35,6 +35,11 @@ export default function Product() {
                   <div className="productInfoItem">
                       <span className="productInfoKey">in stock:</span>
                       <span className="productInfoValue">no</span>
+                  </div>
+                  <div className="productInfoItem">
+                  <Link to="/products">
+                    <button className="productAddButton">Update</button>
+                  </Link>
                   </div>
               </div>
           </div>

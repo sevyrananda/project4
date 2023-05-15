@@ -17,7 +17,7 @@ function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <Link to="/" className="link">
+            <Link to="/dashboard" className="link">
             <li className="sidebarListItem">
               <Dashboard className="sidebarIcon" />
               Dashboard
@@ -39,7 +39,7 @@ function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Page Petugas</h3>
           <ul className="sidebarList">
-            <Link to="" className="link">
+            <Link to="/timbang" className="link">
               <li className="sidebarListItem">
                 <FitnessCenter className="sidebarIcon" />
                 Timbang Truk
@@ -73,7 +73,7 @@ function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Page Supervisor</h3>
           <ul className="sidebarList">
-            <Link to="/approves" className="link">
+            <Link to="" className="link">
               <li className="sidebarListItem">
                 <DoneAll className="sidebarIcon" />
                 Approval
