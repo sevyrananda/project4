@@ -45,7 +45,7 @@ function Sidebar() {
                 Timbang Truk
               </li>
             </Link>
-            <Link to="/edit" className="link">
+            <Link to="/edits" className="link">
               <li className="sidebarListItem">
                 <Edit className="sidebarIcon" />
                 Edit Data

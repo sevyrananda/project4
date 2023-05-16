@@ -1,11 +1,11 @@
 import "./timbang.css";
-import WidgetLg from "../../components/widgetLg/WidgetLg";
+import WidgetSm from "../../components/widgetSm/WidgetSm";
 
 export default function Timbang() {
   return (
     <div className="home">
       <div className="homeWidgets">
-        <WidgetLg/>
+        <WidgetSm/>
       </div>
     </div>
   );

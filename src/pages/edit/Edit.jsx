@@ -1,119 +1,97 @@
 import {
+  Alarm,
   CalendarToday,
-  LocationSearching,
-  MailOutline,
-  PermIdentity,
-  PhoneAndroid,
-  Publish,
+  Commute,
+  FitnessCenter,
+  VerifiedUser,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import "./edit.css";
 
-export default function User() {
+export default function Edit() {
   return (
     <div className="user">
       <div className="userTitleContainer">
         <h2 className="userTitle">Edit Data Timbang</h2>
-        <Link to="/newUser">
+        <Link to="/inputmanual">
           <button className="userAddButton">Create</button>
         </Link>
       </div>
       <div className="userContainer">
         <div className="userShow">
-          <div className="userShowTop">
-            <img
-              src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-              className="userShowImg"
-            />
-            <div className="userShowTopTitle">
-              <span className="userShowUsername">Anna Becker</span>
-              <span className="userShowUserTitle">Software Engineer</span>
-            </div>
-          </div>
           <div className="userShowBottom">
-            <span className="userShowTitle">Account Details</span>
+            <span className="userShowTitle">Detail Data</span>
             <div className="userShowInfo">
-              <PermIdentity className="userShowIcon" />
-              <span className="userShowInfoTitle">annabeck99</span>
+              <VerifiedUser className="userShowIcon" />
+              <span className="userShowInfoTitle">ID Truk : 1 </span>
             </div>
             <div className="userShowInfo">
               <CalendarToday className="userShowIcon" />
-              <span className="userShowInfoTitle">10.12.1999</span>
-            </div>
-            <span className="userShowTitle">Contact Details</span>
-            <div className="userShowInfo">
-              <PhoneAndroid className="userShowIcon" />
-              <span className="userShowInfoTitle">+1 123 456 67</span>
+              <span className="userShowInfoTitle">Tanggal : 08/09/2023 </span>
             </div>
             <div className="userShowInfo">
-              <MailOutline className="userShowIcon" />
-              <span className="userShowInfoTitle">annabeck99@gmail.com</span>
+              <Alarm className="userShowIcon" />
+              <span className="userShowInfoTitle">Jam : 9.10 </span>
             </div>
             <div className="userShowInfo">
-              <LocationSearching className="userShowIcon" />
-              <span className="userShowInfoTitle">New York | USA</span>
+              <Commute className="userShowIcon" />
+              <span className="userShowInfoTitle">Plat Nomor : AE 123 BC</span>
+            </div>
+            <div className="userShowInfo">
+              <FitnessCenter className="userShowIcon" />
+              <span className="userShowInfoTitle">Berat : 90 Kg</span>
             </div>
           </div>
         </div>
         <div className="userUpdate">
-          <span className="userUpdateTitle">Edit</span>
+          <span className="userUpdateTitle">Edit Data</span>
           <form className="userUpdateForm">
             <div className="userUpdateLeft">
               <div className="userUpdateItem">
-                <label>Username</label>
+                <label>ID Truk</label>
                 <input
                   type="text"
-                  placeholder="annabeck99"
+                  placeholder="1"
                   className="userUpdateInput"
                 />
               </div>
               <div className="userUpdateItem">
-                <label>Full Name</label>
+                <label>Tanggal</label>
                 <input
                   type="text"
-                  placeholder="Anna Becker"
+                  placeholder="08/09/2023"
                   className="userUpdateInput"
                 />
               </div>
               <div className="userUpdateItem">
-                <label>Email</label>
+                <label>Jam</label>
                 <input
                   type="text"
-                  placeholder="annabeck99@gmail.com"
+                  placeholder="9.10"
                   className="userUpdateInput"
                 />
               </div>
               <div className="userUpdateItem">
-                <label>Phone</label>
+                <label>Plat Nomor</label>
                 <input
                   type="text"
-                  placeholder="+1 123 456 67"
+                  placeholder="AE 123 BC"
                   className="userUpdateInput"
                 />
               </div>
               <div className="userUpdateItem">
-                <label>Address</label>
+                <label>Berat</label>
                 <input
                   type="text"
-                  placeholder="New York | USA"
+                  placeholder="90 Kg"
                   className="userUpdateInput"
                 />
               </div>
             </div>
             <div className="userUpdateRight">
-              <div className="userUpdateUpload">
-                <img
-                  className="userUpdateImg"
-                  src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                  alt=""
-                />
-                <label htmlFor="file">
-                  <Publish className="userUpdateIcon" />
-                </label>
-                <input type="file" id="file" style={{ display: "none" }} />
-              </div>
+              <Link to= "/edits">
               <button className="userUpdateButton">Update</button>
+              </Link>
             </div>
           </form>
         </div>

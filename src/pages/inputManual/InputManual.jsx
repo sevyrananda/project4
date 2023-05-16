@@ -1,4 +1,5 @@
 import "./inputManual.css";
+import { Link } from "react-router-dom";
 
 export default function inputManual() {
   return (
@@ -11,48 +12,44 @@ export default function inputManual() {
           <form className="inputManualUpdateForm">
             <div className="inputManualUpdateLeft">
               <div className="inputManualUpdateItem">
-                <label>Nomor Plat</label>
+                <label>ID Truk</label>
+                <>
+                  1
+                  </>
+              </div>
+              <div className="inputManualUpdateItem">
+                <label>Tanggal</label>
                 <input
-                  type="text"
-                  placeholder="Masukkan nomor plat"
+                  type="date"
                   className="inputManualUpdateInput"
                 />
               </div>
               <div className="inputManualUpdateItem">
-                <label>Berat Total</label>
+                <label>Jam</label>
                 <input
-                  type="text"
-                  placeholder="Masukkan berat total"
+                  type="time"
                   className="inputManualUpdateInput"
                 />
               </div>
               <div className="inputManualUpdateItem">
-                <label>Berat Kosong</label>
+                <label>Plat Nomor</label>
                 <input
                   type="text"
-                  placeholder="Masukkan Berat Kosong"
+                  placeholder="Masukkan Plat Nomor"
                   className="inputManualUpdateInput"
                 />
               </div>
               <div className="inputManualUpdateItem">
-                <label>Berat Muatan</label>
-                <input
-                  type="text"
-                  placeholder="Masukkan Berat Muatan"
-                  className="inputManualUpdateInput"
-                />
-              </div>
-              <div className="inputManualUpdateItem">
-                <label>Jenis Muatan</label>
-                <input
-                  type="text"
-                  placeholder="Masukkan Jenis Muatan"
-                  className="inputManualUpdateInput"
-                />
+                <label>Berat</label>
+                <>
+                  90
+                </>
               </div>
             </div>
             <div className="inputManualUpdateRight">
+              <Link to ="/edits">
               <button className="inputManualUpdateButton">Simpan</button>
+              </Link>
             </div>
           </form>
         </div>

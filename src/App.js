@@ -51,17 +51,17 @@ function App() {
           <Route path="/approved">
             <ApprovedList />
           </Route>
-          <Route path="/edit">
+          <Route path="/edits">
             <EditList />
           </Route>
-          <Route path="/edit/:userId">
+          <Route path="/edit/:editId">
             <Edit />
-          </Route>
-          <Route exact path="/rekapLaporan">
-            <RekapLaporan />
           </Route>
           <Route exact path="/inputManual">
             <InputManual />
+          </Route>
+          <Route exact path="/rekapLaporan">
+            <RekapLaporan />
           </Route>
           <Route exact path="/timbang">
             <Timbang />
