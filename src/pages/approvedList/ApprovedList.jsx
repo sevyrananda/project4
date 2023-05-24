@@ -1,3 +1,4 @@
+import React from "react";
 import "./approvedList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { productRows } from "../../dummyData";

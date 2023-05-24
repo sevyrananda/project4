@@ -1,3 +1,4 @@
+import React from "react";
 import "./inputManual.css";
 import { Link } from "react-router-dom";
 
@@ -42,7 +43,7 @@ export default function inputManual() {
               <div className="inputManualUpdateItem">
                 <label>Berat</label>
                 <>
-                  90
+                  90 kg
                 </>
               </div>
             </div>

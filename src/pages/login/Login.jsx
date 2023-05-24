@@ -22,8 +22,10 @@ export default function Form() {
                 <span>Enjoy the service</span>
 
                 <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
-                    <input type="text" {...register("username")} placeholder='username' />
-                    <input type="text" {...register("password")} placeholder='password' />
+                    <span>Username</span>
+                    <input type="text" {...register("username")} placeholder='Masukkan username' />
+                    <span>Password</span>
+                    <input type="text" {...register("password")} placeholder='Masukkan password' />
                     <Link to="/dashboard">
                     <button className="loginButton">Login</button>
                     </Link>

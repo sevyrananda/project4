@@ -1,3 +1,4 @@
+import React from "react";
 import "./timbang.css";
 import WidgetSm from "../../components/widgetSm/WidgetSm";
 
