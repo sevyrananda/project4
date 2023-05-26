@@ -3,14 +3,32 @@ import "./userList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { userRows } from "../../dummyData";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import { useState } from "react";
+import Swal from 'sweetalert2';
 
 export default function UserList() {
   const [data, setData] = useState(userRows);
 
+  const history = useHistory();
+
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Data has been deleted!', '', 'success')
+        history.push("/users/" + id);
+        setData(data.filter((item) => item.id !== id));
+      }
+    })
   };
   
   const columns = [

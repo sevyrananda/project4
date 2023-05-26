@@ -1,8 +1,20 @@
 import React from "react";
 import "./inputManual.css";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 
-export default function inputManual() {
+const InputManual = () => {
+
+  const handleCellButtonClick = () => {
+    Swal.fire({
+      position: 'top-bottom',
+      icon: 'success',
+      title: 'Data has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
+  
   return (
     <div className="inputManual">
       <div className="inputManualTitleContainer">
@@ -49,7 +61,7 @@ export default function inputManual() {
             </div>
             <div className="inputManualUpdateRight">
               <Link to ="/edits">
-              <button className="inputManualUpdateButton">Simpan</button>
+              <button className="inputManualUpdateButton" onClick={() => handleCellButtonClick()}>Simpan</button>
               </Link>
             </div>
           </form>
@@ -58,3 +70,5 @@ export default function inputManual() {
     </div>
   );
 }
+
+export default InputManual;

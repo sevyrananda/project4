@@ -8,8 +8,18 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import "./edit.css";
+import Swal from 'sweetalert2';
 
 export default function Edit() {
+  const handleCellButtonClick = () => {
+    Swal.fire({
+      position: 'top-bottom',
+      icon: 'success',
+      title: 'Data has been updated',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
   return (
     <div className="user">
       <div className="userTitleContainer">
@@ -91,7 +101,7 @@ export default function Edit() {
             </div>
             <div className="userUpdateRight">
               <Link to= "/edits">
-              <button className="userUpdateButton">Update</button>
+              <button className="userUpdateButton" onClick={() => handleCellButtonClick()}>Update</button>
               </Link>
             </div>
           </form>
